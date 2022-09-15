@@ -8,7 +8,12 @@ app.listen(port, () => console.log(`Example app listening on port ${port}!`));
 
 app.use(function (req, res, next) {
   console.log('Time: %d', Date.now())
-  console.dir(req.ip)
+   var forwardedIpsStr = req.header('x-forwarded-for');
+   var IP = '';
+
+   if (forwardedIpsStr) {
+      IP = forwardedIps = forwardedIpsStr.split(',')[0]; 
+     console.log(IP)
   next()
 });
 
