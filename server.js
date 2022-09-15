@@ -7,7 +7,7 @@ const { MongoClient } = require("mongodb");
 const uri = "mongodb+srv://edgegum_sa_east:mK8VfFVI9IrOMbl3@edge-sa-east.e3ftd.mongodb.net/sample_mflix?retryWrites=true&w=majority"
 
 // use the express-static middleware
-app.use(express.static("public"));
+//app.use(express.static("public"));
 
 // define the first route
 app.get("/api/movie", async function (req, res) {
