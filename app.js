@@ -9,7 +9,7 @@ app.listen(port, () => console.log(`Example app listening on port ${port}!`));
 app.use(function (req, res, next) {
   console.log('Time: %d', Date.now())
   next()
-})
+});
 
 app.use(function run() {
   fetch("/api/movie")
