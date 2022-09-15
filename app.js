@@ -14,6 +14,7 @@ app.use(function (req, res, next) {
    if (forwardedIpsStr) {
       IP = forwardedIps = forwardedIpsStr.split(',')[0]; 
      console.log(IP)
+   }
   next()
 });
 
