@@ -11,10 +11,9 @@ app.use(function (req, res, next) {
    var forwardedIpsStr = req.header('x-forwarded-for');
    var IP = '';
 
-   if (forwardedIpsStr) {
-      IP = forwardedIps = forwardedIpsStr.split(',')[0]; 
-     console.log(IP)
-   }
+   IP = forwardedIps = forwardedIpsStr.split(',')[0]; 
+   console.log(IP)
+   
   next()
 });
 
