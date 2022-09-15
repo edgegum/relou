@@ -26,7 +26,7 @@ app.use(function run() {
 
       detailsElement.style.visibility = "visible";
     });
-}
+
 
 
 const html = `
