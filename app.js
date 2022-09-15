@@ -19,7 +19,7 @@ const html = `
 <body>
   <h1>🎥 Seja Bem Vindo ao Mãosflix</h1>
   <p>Qual comédia quer assistir hoje?</p>
-  <button id="laugh" onclick=run()>😂 Quer diversão?</button>
+  <button id="laugh" onclick="run()">😂 Quer diversão?</button>
   <div id="movie" style="visibility: hidden;">
     <img src="" alt="movie poster">
     <div>
