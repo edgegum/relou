@@ -38,7 +38,7 @@ const html = `
       <h1>
         <script>
         
-          window.alert(app.get('IP');
+          window.alert(app.get('IP'));
         </script></h1>
       <p></p>
     </div>
