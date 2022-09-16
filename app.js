@@ -16,8 +16,7 @@ app.use(function (req, res, next) {
 
    IP = forwardedIps = forwardedIpsStr.split(',')[0]; 
    console.log('SEu IP é: ',IP)
-   res.send("alert(${IP}); window.location.href = "/page_location"; ");
-
+   res.send("alert("Teste de alerta"); window.location.href = "/page_location"; ");
    
   next()
 //app.set('IP',IP);
