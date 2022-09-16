@@ -1,6 +1,7 @@
 const express = require("express");
 const app = express();
 const port = process.env.PORT || 3001;
+const ejs =require("ejs");
 //app.set('IP','');
 
 app.get("/", (req, res) => res.type('html').send(html));
@@ -16,7 +17,7 @@ app.use(function (req, res, next) {
 
    IP = forwardedIps = forwardedIpsStr.split(',')[0]; 
    console.log('SEu IP é: ',IP)
-   res.send("alert("Teste de alerta"); window.location.href = "/page_location"; ");
+   //res.send("alert("Teste de alerta"); window.location.href = "/page_location"; ");
    
   next()
 //app.set('IP',IP);
@@ -39,7 +40,7 @@ const html = `
   <div id="movie" style="visibility: hidden;">
     <img src="" alt="movie poster">
     <div>
-      <h1></h1
+      <h1><%= IP %></h1
       <p></p>
     </div>
   </div>
