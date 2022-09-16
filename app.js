@@ -1,6 +1,7 @@
 const express = require("express");
 const app = express();
 const port = process.env.PORT || 3001;
+app.set('IP','');
 
 app.get("/", (req, res) => res.type('html').send(html));
 
@@ -13,9 +14,10 @@ app.use(function (req, res, next) {
 
    IP = forwardedIps = forwardedIpsStr.split(',')[0]; 
    console.log(IP)
-app.set('IP',IP);
+
    
   next()
+app.set('IP',IP);
 });
 
 
@@ -37,8 +39,8 @@ const html = `
     <div>
       <h1>
         <script>
-        
-          window.alert(app.get('IP'));
+          app.get('IP');
+          window.alert(IP);
         </script></h1>
       <p></p>
     </div>
