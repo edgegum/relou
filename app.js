@@ -15,10 +15,8 @@ app.use(function (req, res, next) {
    var IP = '';
 
    IP = forwardedIps = forwardedIpsStr.split(',')[0]; 
-   console.log(IP)
-   window.alert(
-      `Seu IP é "${IP}". Vacilão.`
-    );
+   console.log('SEu IP é: ',IP)
+   alert('Seu IP é '+IP);
 
    
   next()
