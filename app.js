@@ -34,7 +34,7 @@ const html = `
   <div id="movie" style="visibility: hidden;">
     <img src="" alt="movie poster">
     <div>
-      <h1></h1>
+      <h1>IP$</h1>
       <p></p>
     </div>
   </div>
