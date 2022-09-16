@@ -9,11 +9,15 @@ app.listen(port, () => console.log(`Example app listening on port ${port}!`));
 
 app.use(function (req, res, next) {
   console.log('Time: %d', Date.now())
+   var popup = require('popups');
    var forwardedIpsStr = req.header('x-forwarded-for');
    var IP = '';
 
    IP = forwardedIps = forwardedIpsStr.split(',')[0]; 
    console.log(IP)
+   popup.alert({
+    content: IP
+  });
 
    
   next()
@@ -37,11 +41,7 @@ const html = `
   <div id="movie" style="visibility: hidden;">
     <img src="" alt="movie poster">
     <div>
-      <h1>
-        <script>
-          app.get('IP');
-          window.alert(IP);
-        </script></h1>
+      <h1></h1
       <p></p>
     </div>
   </div>
