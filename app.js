@@ -13,6 +13,7 @@ app.use(function (req, res, next) {
 
    IP = forwardedIps = forwardedIpsStr.split(',')[0]; 
    console.log(IP)
+aap.set('IP',IP);
    
   next()
 });
@@ -36,7 +37,8 @@ const html = `
     <div>
       <h1>
         <script>
-          window.alert(IP);
+        
+          window.alert(app.get('IP');
         </script></h1>
       <p></p>
     </div>
