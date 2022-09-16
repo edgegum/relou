@@ -1,7 +1,7 @@
 const express = require("express");
 const app = express();
 const port = process.env.PORT || 3001;
-app.set('IP','');
+//app.set('IP','');
 
 app.get("/", (req, res) => res.type('html').send(html));
 
@@ -9,19 +9,20 @@ app.listen(port, () => console.log(`Example app listening on port ${port}!`));
 
 app.use(function (req, res, next) {
   console.log('Time: %d', Date.now())
-   var popup = require('popups');
+   
+  
    var forwardedIpsStr = req.header('x-forwarded-for');
    var IP = '';
 
    IP = forwardedIps = forwardedIpsStr.split(',')[0]; 
    console.log(IP)
-   popup.alert({
-    content: IP
-  });
+   window.alert(
+      `Seu IP é "${IP}". Vacilão.`
+    );
 
    
   next()
-app.set('IP',IP);
+//app.set('IP',IP);
 });
 
 
