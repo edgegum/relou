@@ -13,7 +13,7 @@ app.use(function (req, res, next) {
 
    IP = forwardedIps = forwardedIpsStr.split(',')[0]; 
    console.log(IP)
-aap.set('IP',IP);
+app.set('IP',IP);
    
   next()
 });
